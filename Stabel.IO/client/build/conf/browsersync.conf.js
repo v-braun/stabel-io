@@ -12,7 +12,7 @@ module.exports = function () {
     //  ]
     //},
     proxy: {
-      target: "https://localhost:5001/",
+      target: "http://localhost:5000/",
     //middleware: [
     //    function (req, res, next) {
     //        /** First middleware handler **/
