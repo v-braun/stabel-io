@@ -15,11 +15,11 @@ const gutil = require('gulp-util');
  *  The main paths of your project handle these with care
  */
 exports.paths = {
-  src: 'src',
-  dist: '../wwwroot',
-  tmp: '../wwwroot',
+  src: 'client',
+  dist: 'wwwroot',
+  tmp: 'wwwroot',
   //e2e: 'e2e',
-  tasks: 'build/gulp_tasks'
+  tasks: 'client_build/gulp_tasks'
 };
 
 /**

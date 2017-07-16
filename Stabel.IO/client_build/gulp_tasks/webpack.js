@@ -11,11 +11,8 @@ const webpackDistConf = require('../conf/webpack-dist.conf');
 const chalk = require('chalk');
 const info = chalk.bold.green;
 const moment = require('moment');
-const WindowsToaster = require('node-notifier').WindowsToaster;
-var notifier = new WindowsToaster({
-    withFallback: true, // Fallback to Growl or Balloons?
-    customPath: void 0 // Relative/Absolute path if you want to use your fork of SnoreToast.exe
-  });
+const notifier = require('node-notifier');
+
 
 gulp.task('webpack:dev', done => {
   webpackWrapper(false, webpackConf, done);

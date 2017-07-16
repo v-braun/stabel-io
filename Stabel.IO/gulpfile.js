@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const HubRegistry = require('gulp-hub');
 const browserSync = require('browser-sync');
 
-const conf = require('./build/conf/gulp.conf');
+const conf = require('./client_build/conf/gulp.conf');
 
 // Load some files into the registry
 const hub = new HubRegistry([conf.path.tasks('*.js')]);

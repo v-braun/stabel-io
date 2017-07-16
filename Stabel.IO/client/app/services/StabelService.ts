@@ -2,7 +2,6 @@ import {Injectable}     from '@angular/core';
 import {Http, Response, Headers, RequestOptions} from '@angular/http';
 import {SafeResourceUrl, DomSanitizer} from '@angular/platform-browser';
 import {StabelSamples} from './StabelSamples';
-import {ConfigService} from './ConfigService';
 
 
 export class TemplateParameter {
@@ -31,8 +30,7 @@ export class StabelService {
   
   constructor (private http: Http, 
                private sanitizer: DomSanitizer,
-               private samples: StabelSamples,
-               private configService : ConfigService) {
+               private samples: StabelSamples) {
                  //console.log(configService.config);
                }
   

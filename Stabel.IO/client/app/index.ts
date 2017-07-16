@@ -1,11 +1,11 @@
 import {NgModule} from '@angular/core';
+import {HttpModule} from '@angular/http';
 import {BrowserModule} from '@angular/platform-browser';
 import {CommonModule} from '@angular/common';
 import { FormsModule }   from '@angular/forms';
 import {routing, RootComponent} from './routes';
 
 import {StabelSamples} from './services/StabelSamples';
-import {ConfigService} from './services/ConfigService';
 
 import {MdTabsModule} from '@angular/material';
 import {MdInputModule} from '@angular/material';
@@ -48,7 +48,8 @@ import { ClipboardModule } from 'ngx-clipboard';
     MdIconModule,
     MdChipsModule,
     MdCardModule,
-    MdDialogModule
+    MdDialogModule,
+    HttpModule
   ],
   declarations: [
     RootComponent,
@@ -62,7 +63,7 @@ import { ClipboardModule } from 'ngx-clipboard';
     FooterComponent,
     CopyFieldComponent
   ],
-  providers: [StabelSamples, ConfigService],
+  providers: [StabelSamples],
   entryComponents: [StabelDialogComponent],
   bootstrap: [RootComponent]
 })
