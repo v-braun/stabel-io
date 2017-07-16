@@ -1,0 +1,102 @@
+@import './style-imports/vars';
+
+/*
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+*/
+
+@include angular-material-theme($stabel-theme);
+
+
+body, h1, h2, h3 {
+  font-weight: 300; 
+  margin: 0px;
+}
+
+
+a {
+  color: mat-color($stabel-primary, default-contrast);
+  text-decoration: none;
+
+  &:hover {
+    color: mat-color($stabel-accent, lighter);
+  }
+}
+
+// fixed footer on bottom
+html{
+  min-height: 100%;
+  > body{
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    > app-root,
+    > app-root > home-page{
+      padding-bottom: $footer-height * 2;
+    }
+  }
+}
+
+
+
+button.btn-prim{
+  background-color: mat-color($stabel-primary, default);
+  color: mat-color($stabel-primary, default-contrast);
+}
+/*
+// html, body, #root {
+//   margin: 0;
+//   height: 100%;
+//   font-family: 'Open Sans', sans-serif;
+// }
+
+
+
+// a {
+//   color: white;
+//   text-decoration: none;
+
+//   &:hover {
+//     color: #5aadbb;
+//   }
+// }
+
+// .mat-input-underline{
+//   background-color: silver;
+// }
+
+
+// .techs-container {
+//   margin: 1rem;
+// }
+// .techs-h2 {
+//   font-weight: 300;
+//   font-size: 1.5rem;
+// }
+// .techs {
+//   display: flex;
+//   flex-direction: row;
+//   flex-wrap: wrap;
+//   justify-content: space-around;
+// }
+
+// .tech {
+//   height: 15rem;
+//   width: 15rem;
+//   border: 1px solid lightgray;
+//   border-radius: 1rem;
+//   margin: 1rem;
+//   padding: 1rem;
+// }
+// .tech-logo {
+//   width: 5rem;
+//   height: 5rem;
+//   float: right;
+//   margin: 0 0 .5rem .5rem;
+// }
+// .tech-h3 {
+//   font-size: 1.5rem;
+//   margin: 0 0 2rem 0;
+// }
+*/

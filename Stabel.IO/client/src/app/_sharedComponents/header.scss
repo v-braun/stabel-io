@@ -1,0 +1,19 @@
+@import '../../style-imports/vars';
+
+.header {
+
+  display: flex;
+  align-items: center;
+
+
+  background-color: mat-color($stabel-accent, default);
+  color: mat-color($stabel-accent, default-contrast);
+  
+  
+}
+
+.header-title {
+  flex: 1;
+  font-size: 1.5rem;
+  margin: 1rem;
+}

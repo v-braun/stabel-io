@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "noImplicitAny": false,
+    "typeRoots": [ "node_modules/@types/" ],
+    "types": [
+      "node",
+      "es6-shim"
+    ]
+  },
+  "compileOnSave": false,
+  "filesGlob": [
+    "client/**/*.ts",
+    "client/**/*.tsx",
+    "!node_modules/**"
+  ]
+}

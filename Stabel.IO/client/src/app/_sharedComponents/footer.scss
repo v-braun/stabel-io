@@ -1,0 +1,21 @@
+@import '../../style-imports/vars';
+
+.footer {
+
+  // width: 100%;
+  // bottom: 0px;
+}
+stabel-footer{
+  padding: 0.5rem;
+  font-size: 1rem;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: mat-color($stabel-accent, default);
+  color: mat-color($stabel-accent, default-contrast);
+
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   height: $footer-height;
+}

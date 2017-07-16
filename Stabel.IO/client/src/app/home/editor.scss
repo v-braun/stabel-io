@@ -1,0 +1,54 @@
+@import '../../style-imports/vars';
+
+stabel-editor{
+  
+  min-height: 400px;
+  margin:30px; 
+  border: 1px solid rgba(0,0,0,.03); 
+  box-shadow: 0 2px 2px rgba(0,0,0,.24), 0 0 2px rgba(0,0,0,.12);
+
+  md-tab-body{
+    height: 100%;
+  }
+  .preview-container{
+    display: flex;
+    .parameters{
+      flex: 1;
+    }
+    .preview{
+      flex: 2;
+      h3{
+        padding-top: 16px;
+        font-family: Roboto,"Helvetica Neue",sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      img{
+        margin: 50px;
+      }
+    }
+
+  }
+
+  .stabel-head{
+    padding:12px; 
+    background-color:rgba(0,0,0,.03);   
+  }
+  
+  md-divider.mat-divider{
+    margin-top: 50px;
+    margin-bottom: 25px;
+  }
+
+  button#generate-btn{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 300px;
+  }
+  .mat-list .mat-list-item .mat-list-item-content{
+    height: 59px;
+  }
+ 
+}
+

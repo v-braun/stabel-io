@@ -1,0 +1,27 @@
+@import '../../style-imports/vars';
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+
+  background-color: mat-color($stabel-primary, default);
+  color: mat-color($stabel-primary, default-contrast);
+  
+}
+.title-h1 {
+  font-weight: 300;
+  font-size: 4rem;
+  margin: 1rem;
+  span{
+    text-transform: uppercase;
+    font-size: 48px;
+  }
+}
+
+.title-h2 {
+  font-weight: 300;
+  font-size: 2rem;
+  margin: .5rem;
+}

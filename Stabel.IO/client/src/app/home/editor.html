@@ -1,0 +1,43 @@
+<div class="stabel-head">
+  <span>Editor</span>
+</div>
+
+<md-tab-group [(selectedIndex)]="selectedTab" (selectChange)="tabChanged($event)">
+  <md-tab label="Preview">
+
+    <div class="preview-container">
+      <md-list class="parameters">
+        <h3 md-subheader>parameters</h3>
+        <md-list-item *ngFor="let item of params">
+          <md-input-container>
+            <input 
+              [(ngModel)]="item.value" 
+              [placeholder]="item.name" 
+              (keyup)="paramChanged()"
+              type="text" mdInput>
+          </md-input-container>
+        </md-list-item>
+      </md-list>
+      
+      <div class="preview" >
+        <h3 md-subheader>result</h3>
+        <img [src]="compiled" />
+      </div>
+    </div>
+
+    <md-divider></md-divider>
+
+    <button id="generate-btn" class="btn-prim" (click)="generateClicked()" md-raised-button>generate</button>
+    
+  </md-tab>
+  
+  <md-tab label="Edit">
+      <svg-editor></svg-editor>
+  </md-tab>
+
+
+  <md-tab label="Gallery">
+      <stabel-gallery (select)="galleryItemSelected($event)" [items]="sampleItems"></stabel-gallery>
+  </md-tab>
+</md-tab-group>
+

@@ -1,0 +1,17 @@
+
+
+<div class="copy-field-group">
+    <div class="copy-field-btn">
+        <button [class.copied]= "copied" type="button" [ngxClipboard]="inputTarget" (cbOnSuccess)="copyClicked()">
+                <span>{{label}}</span>
+        </button>
+    </div>
+
+    <div class="copy-field-input">
+        <input type="text" class="" [(ngModel)]="text" readonly placeholder=""
+    #inputTarget>
+    </div>
+    
+
+    
+</div>

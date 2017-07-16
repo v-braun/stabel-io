@@ -1,0 +1,49 @@
+@import '../../style-imports/vars';
+stabel-dialog{
+  //padding: 30px;
+  //max-width: 600px;
+  > md-card.mat-card{
+    box-shadow: none!important;
+    padding: 0px!important;
+  }
+  .mat-card-content{
+    margin: 8px;
+
+    md-card-subtitle{
+      line-height: 24px;
+      height: 24px;
+      
+      md-icon{
+        float: left;
+        margin-right: 7px;
+      }
+    }
+
+    > md-divider{
+      margin-bottom: 24px;      
+      margin-top: 24px;      
+    }
+    > md-card-subtitle{
+      margin-bottom: 12px;
+    }
+    > section{
+      margin-bottom: 12px;
+    }
+
+    > section{
+      md-card-subtitle{
+        margin-bottom: 3px;
+      }
+    }     
+  }
+
+  md-card-actions{
+    > button.mat-raised-button{
+      display: block;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      background-color: mat-color($stabel-primary, default);
+      color: mat-color($stabel-primary, default-contrast);
+    }
+  }
+}

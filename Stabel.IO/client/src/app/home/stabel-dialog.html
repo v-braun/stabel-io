@@ -1,0 +1,48 @@
+<md-card>
+  <md-card-header>
+    <md-card-title>there it is</md-card-title>    
+  </md-card-header>
+  <md-card-content>
+    <md-card-subtitle>
+      <md-icon>cloud_download</md-icon>
+      <span>GET ...</span>
+    </md-card-subtitle>
+
+    <section>
+      <md-card-subtitle>RAW from</md-card-subtitle>
+      <copy-field [text]="sampleUrl" ></copy-field>
+    </section>
+
+    <section>
+      <md-card-subtitle>or as HTML</md-card-subtitle>
+      <copy-field [text]="sampleUrl" ></copy-field>
+    </section>
+
+    <section>
+      <md-card-subtitle>or as Markdown</md-card-subtitle>
+      <copy-field [text]="sampleUrl" ></copy-field>
+    </section>    
+
+    <md-divider></md-divider>
+
+    <md-card-subtitle>
+      <md-icon>cloud_upload</md-icon>
+      <span>POST ...</span>
+    </md-card-subtitle>
+
+    <section>
+      <md-card-subtitle>RAW to</md-card-subtitle>
+      <copy-field [text]="sampleUrl" ></copy-field>
+    </section> 
+
+    <section>
+      <md-card-subtitle>or as cURL</md-card-subtitle>
+      <copy-field [text]="sampleUrl" ></copy-field>
+    </section> 
+    
+
+  </md-card-content>
+  <md-card-actions>
+    <button md-raised-button>got it</button>
+  </md-card-actions>
+</md-card>

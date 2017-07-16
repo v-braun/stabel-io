@@ -1,0 +1,61 @@
+@import '../../style-imports/vars';
+
+copy-field{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  //margin-top: 10px;
+  //margin-bottom: 10px;
+  .copy-field-group{
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+
+    input, button{
+      font-family:Roboto, "Helvetica Neue", sans-serif;
+      font-size:16px;
+      font-weight:300;
+      border-color: rgb(238, 238, 238);
+      border-style: solid;
+      background-color: white;
+    }
+
+    .copy-field-input{
+      height: 34px;
+      width: auto;
+      
+      > input{
+        height: 28px;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 100%;
+      }
+      
+      overflow: hidden;
+    }
+    .copy-field-btn{
+      
+      float: right;
+      width: 55px;
+
+      > button{
+        min-width: 55px;
+        padding-left: 10px;
+        padding-right: 10px;
+        height: 34px;
+        border-left-style: none;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        outline: none;
+        background-color: mat-color($stabel-primary, default);
+        color: mat-color($stabel-primary, default-contrast);
+
+        &.copied{
+          background-color: mat-color($stabel-accent, default);
+          color: mat-color($stabel-accent, default-contrast);
+        }
+      }
+
+    }
+  }
+}
