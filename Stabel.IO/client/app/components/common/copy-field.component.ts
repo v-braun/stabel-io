@@ -1,10 +1,10 @@
 import {Component, SimpleChange, Input} from '@angular/core';
 
-import './copy-field.scss';
+import './copy-field.component.scss';
 
 @Component({
   selector: 'copy-field',
-  template: require('./copy-field.html')
+  template: require('./copy-field.component.html')
 })
 export class CopyFieldComponent {
 

@@ -4,7 +4,7 @@ import { SafeResourceUrl} from '@angular/platform-browser';
 import {StabelService, TemplateParameter, SampleItem} from '../services/StabelService';
 import { DomSanitizer} from '@angular/platform-browser';
 import {MdTabChangeEvent} from '@angular/material';
-import {SvgEditorComponent} from '../_sharedComponents/svg-editor';
+import {SvgEditorComponent} from '../components/common/svg-editor';
 
 
 
@@ -34,9 +34,14 @@ export class EditorComponent {
   private _content: string;
   private selectedTab = 0;
 
-  constructor(private stabelService : StabelService){
-    this.sampleItems = stabelService.getSamples();
-    this.showSample(this.sampleItems[0]);
+  constructor(
+    private stabelService : StabelService){
+
+    stabelService.getSamples().subscribe(data => {
+      this.sampleItems = data;
+      this.showSample(this.sampleItems[0]);
+      console.log(this.sampleItems[0]);
+    });
   }
 
   ngAfterViewInit() {
@@ -86,6 +91,7 @@ export class EditorComponent {
   }
 
   private showSample(item : SampleItem){
+    if(!item) return;
     this._content = item.svg;
     this.params = item.params;
     this.compiled = item.compiled;

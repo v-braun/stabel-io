@@ -1,9 +1,9 @@
 import {Component} from '@angular/core';
 
-import './header.scss';
+import './header.component.scss';
 
 @Component({
   selector: 'stabel-header',
-  template: require('./header.html')
+  template: require('./header.component.html')
 })
 export class HeaderComponent {}

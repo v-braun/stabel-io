@@ -1,0 +1,24 @@
+<svg width="30" height="30"
+    xmlns="http://www.w3.org/2000/svg">
+    <style>
+      #ellipse{
+        fill: silver;
+      }
+      #ellipse.red{
+        fill:#f44336;
+      }
+      #ellipse.green{
+        fill:#5fbf00
+      }
+      #ellipse.yellow{
+        fill:#ffeb3b
+      }
+      #ellipse.blue{
+        fill:#2196f3
+      }
+      
+    </style>
+    <g>
+        <ellipse stroke="#ffffff" ry="14" rx="14" class="{{color}}" id="ellipse" cy="15.04031" cx="15.04031" fill="#619E73"/>
+    </g>
+</svg>

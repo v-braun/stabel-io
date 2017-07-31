@@ -1,0 +1,27 @@
+<svg width="90" height="75"
+    xmlns="http://www.w3.org/2000/svg">
+    <style>
+      #ellipse{
+        fill: silver;
+      }
+      #ellipse.red{
+        fill:#f44336;
+      }
+      #ellipse.green{
+        fill:#5fbf00
+      }
+      #ellipse.yellow{
+        fill:#ffeb3b
+      }
+      #ellipse.blue{
+        fill:#2196f3
+      }
+      
+    </style>    
+    <g>
+        <ellipse stroke-width="2" class="{{color}}" stroke="#444444" ry="15" rx="14" id="ellipse" cy="16.33443" cx="45" fill="#619E73"/>
+        <rect fill="#444444" stroke-width="0" stroke-opacity="null" x="1" y="42.94117" width="88" height="23.52938" id="svg_1" stroke="#ffffff" rx="3"/>
+        <path fill="#444444" stroke="#ffffff" stroke-width="0" stroke-opacity="null" d="m36.32354,42.96804l8.67646,-12.35293l8.67646,12.35293l-17.35292,0z" id="svg_2"/>
+        <text fill="#ffffff" stroke-width="0" stroke-opacity="null" x="44" y="58.82716" font-size="12" font-family="Helvetica, Arial, sans-serif" text-anchor="middle" xml:space="preserve" stroke="#ffffff">{{text}}</text>
+    </g>
+</svg>

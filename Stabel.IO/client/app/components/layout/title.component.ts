@@ -1,11 +1,11 @@
 import {Component} from '@angular/core';
 
 
-import './title.scss';
+import './title.component.scss';
 
 
 @Component({
   selector: 'stabel-title',
-  template: require('./title.html')
+  template: require('./title.component.html')
 })
 export class TitleComponent {}

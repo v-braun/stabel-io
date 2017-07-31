@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+    xmlns="http://www.w3.org/2000/svg" width="80" height="32">
+    <style>
+      #pause, #play{
+        display:none;
+      }
+      rect{
+        fill: silver;
+      }
+      .stopped > rect{
+        fill:#f44336;
+      }
+      .running > rect{
+        fill:#5fbf00
+      }
+      .stopped > #pause{
+        display:block;
+      }
+      .running > #play{
+        display:block;
+      }
+    </style>
+    <g class="{{stopped or running}}">
+        <rect rx="6" stroke="null" stroke-width="null" stroke-opacity="null" x="0" y="0" width="80" height="32" id="svg_1" />
+        <path id="pause" fill="#ffffff" d="m65.26087,20l2,0l0,-8l-2,0l0,8zm3,-14c-5.52,0 -10,4.48 -10,10s4.48,10 10,10s10,-4.48 10,-10s-4.48,-10 -10,-10zm0,18c-4.41,0 -8,-3.59 -8,-8s3.59,-8 8,-8s8,3.59 8,8s-3.59,8 -8,8zm1,-4l2,0l0,-8l-2,0l0,8z" />
+        <path id="play" fill="#ffffff" d="m64.56251,20.5l6,-4.5l-6,-4.5l0,9zm2,-14.5c-5.52,0 -10,4.48 -10,10s4.48,10 10,10s10,-4.48 10,-10s-4.48,-10 -10,-10zm0,18c-4.41,0 -8,-3.59 -8,-8s3.59,-8 8,-8s8,3.59 8,8s-3.59,8 -8,8z" />
+        <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" id="svg_4" y="26.93342" x="4.57542" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="null" fill="#ffffff">{{stopped or running}}</text>
+        <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" id="svg_5" y="12.84783" x="4.67393" stroke-opacity="null" stroke-width="0" stroke="null" fill="#ffffff">{{service name}}</text>
+    </g>
+</svg>

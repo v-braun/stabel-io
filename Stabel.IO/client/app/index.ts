@@ -3,9 +3,10 @@ import {HttpModule} from '@angular/http';
 import {BrowserModule} from '@angular/platform-browser';
 import {CommonModule} from '@angular/common';
 import { FormsModule }   from '@angular/forms';
-import {routing, RootComponent} from './routes';
+import {routing, RootComponent} from './root/root.component';
 
-import {StabelSamples} from './services/StabelSamples';
+
+import { SamplesService } from './services/api/Samples.service';
 
 import {MdTabsModule} from '@angular/material';
 import {MdInputModule} from '@angular/material';
@@ -17,17 +18,15 @@ import {MdIconModule, MdChipsModule,
         MdDialogModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-
- 
 import {StabelDialogComponent} from './home/stabel-dialog';
-import {GalleryComponent} from './_sharedComponents/gallery';
+import {GalleryComponent} from './components/gallery.component';
 import {EditorComponent} from './home/editor';
 import {MainComponent} from './home/home';
-import {SvgEditorComponent} from './_sharedComponents/svg-editor';
-import {HeaderComponent} from './_sharedComponents/header';
-import {TitleComponent} from './_sharedComponents/title';
-import {FooterComponent} from './_sharedComponents/footer';
-import {CopyFieldComponent} from './_sharedComponents/copy-field';
+import {SvgEditorComponent} from './components/common/svg-editor';
+import {HeaderComponent} from './components/layout/header.component';
+import {TitleComponent} from './components/layout/title.component';
+import {FooterComponent} from './components/layout/footer.component';
+import {CopyFieldComponent} from './components/common/copy-field.component';
 import { ClipboardModule } from 'ngx-clipboard';
 
 //import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
@@ -63,7 +62,7 @@ import { ClipboardModule } from 'ngx-clipboard';
     FooterComponent,
     CopyFieldComponent
   ],
-  providers: [StabelSamples],
+  providers: [SamplesService],
   entryComponents: [StabelDialogComponent],
   bootstrap: [RootComponent]
 })

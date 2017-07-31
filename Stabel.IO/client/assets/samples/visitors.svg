@@ -1,0 +1,9 @@
+<svg width="128" height="128" xmlns="http://www.w3.org/2000/svg">
+   <g>
+      <rect fill="#01cc44" stroke-width="null" x="0" y="0" width="128" height="128" id="svg_4" rx="16"/>
+      <rect fill="#4c4c4c" stroke-width="null" x="0" y="42.666" width="128" height="42.6666" id="svg_5"/>
+      <text style="cursor: move;" stroke="#000" transform="matrix(1.0554970502853394,0,0,1,0,0) " fill="#ffffff" stroke-width="0" stroke-opacity="null" x="64" y="71.28124" id="svg_1" font-size="24" font-family="Helvetica, Arial, sans-serif" text-anchor="middle" xml:space="preserve">{{count}}</text>
+      <path d="m74.01838,18.02756c4.15763,0 7.48874,-3.35615 7.48874,-7.51378s-3.33111,-7.51378 -7.48874,-7.51378c-4.15763,0 -7.51378,3.35615 -7.51378,7.51378s3.35615,7.51378 7.51378,7.51378zm-20.03675,0c4.15763,0 7.48874,-3.35615 7.48874,-7.51378s-3.33111,-7.51378 -7.48874,-7.51378c-4.15763,0 -7.51378,3.35615 -7.51378,7.51378s3.35615,7.51378 7.51378,7.51378zm0,5.00919c-5.8357,0 -17.53215,2.93037 -17.53215,8.76608l0,6.26148l35.0643,0l0,-6.26148c0,-5.8357 -11.69645,-8.76608 -17.53215,-8.76608zm20.03675,0c-0.72633,0 -1.55285,0.05009 -2.42945,0.12523c2.90533,2.10386 4.93405,4.93405 4.93405,8.64085l0,6.26148l15.02756,0l0,-6.26148c0,-5.8357 -11.69645,-8.76608 -17.53215,-8.76608l-0.00001,0z" id="svg_2" stroke="null" fill="#4c4c4c"/>
+      <text fill="#4c4c4c" stroke="null" stroke-width="0" stroke-opacity="null" x="26.68579" y="115.85662" id="svg_3" font-size="24" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">visitors</text>
+   </g>
+</svg>

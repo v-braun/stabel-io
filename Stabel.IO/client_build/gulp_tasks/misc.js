@@ -23,8 +23,8 @@ function borsersyncFiles() {
 
 function assets() {
   return gulp.src([
-    path.join(conf.paths.src, '/assets/*'),
-    path.join(conf.paths.src, '/vendor/material-icons.*')
+    path.join(conf.paths.src, '/assets/**'),
+    path.join(conf.paths.src, '/vendor/**')
   ])
   .pipe(gulp.dest(conf.paths.dist + '/assets/'));
 }

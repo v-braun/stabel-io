@@ -65,38 +65,29 @@ button.btn-prim{
 // .mat-input-underline{
 //   background-color: silver;
 // }
-
-
-// .techs-container {
-//   margin: 1rem;
-// }
-// .techs-h2 {
-//   font-weight: 300;
-//   font-size: 1.5rem;
-// }
-// .techs {
-//   display: flex;
-//   flex-direction: row;
-//   flex-wrap: wrap;
-//   justify-content: space-around;
-// }
-
-// .tech {
-//   height: 15rem;
-//   width: 15rem;
-//   border: 1px solid lightgray;
-//   border-radius: 1rem;
-//   margin: 1rem;
-//   padding: 1rem;
-// }
-// .tech-logo {
-//   width: 5rem;
-//   height: 5rem;
-//   float: right;
-//   margin: 0 0 .5rem .5rem;
-// }
-// .tech-h3 {
-//   font-size: 1.5rem;
-//   margin: 0 0 2rem 0;
-// }
 */
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}

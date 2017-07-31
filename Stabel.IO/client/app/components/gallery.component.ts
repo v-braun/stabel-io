@@ -1,10 +1,10 @@
 import {Component, Input, EventEmitter, Output} from '@angular/core';
 import {SampleItem} from '../services/StabelService';
-import './gallery.scss';
+import './gallery.component.scss';
 
 @Component({
   selector: 'stabel-gallery',
-  template: require('./gallery.html')
+  template: require('./gallery.component.html')
 })
 export class GalleryComponent {
 

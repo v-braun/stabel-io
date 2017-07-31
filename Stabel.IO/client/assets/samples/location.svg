@@ -1,0 +1,23 @@
+<svg width="128" height="32"
+    xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .yes > rect,
+        .yes > ellipse,
+        .yes > path{
+            fill: #8BC34A
+        }
+        
+    </style>
+    <defs>
+        <linearGradient y2="0" x2="0.5" y1="1" x1="0.5" id="gradient">
+            <stop offset="0" stop-color="#4c4c4c"/>
+            <stop offset="1" stop-color="#b3b3b3"/>
+        </linearGradient>
+    </defs>
+    <g class="{{yes or no}}">
+        <rect height="32" width="128" y="0" x="0" stroke-width="1.5" fill="url(#gradient)" rx="5"/>
+        <ellipse fill="#4c4c4c" stroke-width="1.5" cx="18.78846" cy="16" rx="13.15385" ry="13.15385" stroke="#ffffff"/>
+        <path d="m18.78846,9.07692c-2.67231,0 -4.84616,2.17385 -4.84616,4.84616c0,3.63462 4.84616,9 4.84616,9s4.84616,-5.36539 4.84616,-9c0,-2.67231 -2.17385,-4.84616 -4.84616,-4.84616zm2.76923,5.53846l-2.07692,0l0,2.07692l-1.38462,0l0,-2.07692l-2.07692,0l0,-1.38462l2.07692,0l0,-2.07692l1.38462,0l0,2.07692l2.07692,0l0,1.38462z" id="svg_3" fill="#4c4c4c" stroke="#ffffff"/>
+        <text fill="#ffffff" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="40.82692" y="22.54567" id="svg_6" font-size="19" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">{{location}}</text>
+    </g>
+</svg>
