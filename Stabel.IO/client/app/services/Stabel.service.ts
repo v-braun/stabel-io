@@ -3,6 +3,7 @@ import {Http, Response, Headers, RequestOptions} from '@angular/http';
 import {SafeResourceUrl, DomSanitizer} from '@angular/platform-browser';
 //import {StabelSamples} from './StabelSamples';
 import { SamplesService } from './api/Samples.service';
+import { StabelV1Service } from './api/StabelV1.service';
 import { Observable } from "rxjs/Observable";
 import { Subject } from "rxjs/Subject";
 
@@ -33,7 +34,8 @@ export class StabelService {
   
   constructor (private _http: Http, 
                private _sanitizer: DomSanitizer,
-               private _samples: SamplesService) {
+               private _samples: SamplesService,
+               private _apiService: StabelV1Service) {
                }
   
   getSamples() : Subject<SampleItem[]>{
@@ -62,23 +64,16 @@ export class StabelService {
   }
 
   compile(content : string, params : TemplateParameter[]) : SafeResourceUrl{
-    // try{
-      params.forEach(p => {
-        var exp = '{{' + p.name + '}}';
-        content = content.replace(new RegExp(exp, 'g'), p.value);
-      });
+    params.forEach(p => {
+      var exp = '{{' + p.name + '}}';
+      content = content.replace(new RegExp(exp, 'g'), p.value);
+    });
 
-      let contentBase64 = window.btoa(content);
-      var compiledStr = `data:image/svg+xml;base64,${contentBase64}`;
-      let compiled = this._sanitizer.bypassSecurityTrustResourceUrl(compiledStr);
+    let contentBase64 = window.btoa(content);
+    var compiledStr = `data:image/svg+xml;base64,${contentBase64}`;
+    let compiled = this._sanitizer.bypassSecurityTrustResourceUrl(compiledStr);
 
-      return compiled;
-    // }
-    // catch(e){
-    //   console.log(e);
-    //   return null;
-    // }
-    
+    return compiled;
   }
 
   parse(content : string) : TemplateParameter[]{
@@ -94,7 +89,16 @@ export class StabelService {
   }
 
   create(content : string, parameter : TemplateParameter[]){
-    console.log('create ...');
+    let rq = new StabelV1Service.StabelCreateRequest();
+    rq.content = content;
+    rq.parameter = {};
+    for(var i = 0; i < parameter.length; i++){
+      var name = parameter[i].name;
+      var val = parameter[i].value;
+      rq.parameter[name] = val;
+    }
+
+    return this._apiService.post(rq);
   }
   
 }

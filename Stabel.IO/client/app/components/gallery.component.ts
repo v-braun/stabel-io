@@ -1,5 +1,5 @@
 import {Component, Input, EventEmitter, Output} from '@angular/core';
-import {SampleItem} from '../services/StabelService';
+import {SampleItem} from '../services/Stabel.service';
 import './gallery.component.scss';
 
 @Component({

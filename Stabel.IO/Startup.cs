@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Stabel.IO.Services;
+using Stabel.IO.Services.Impl;
 
 namespace Stabel.IO{
     public class Startup{
@@ -25,6 +27,9 @@ namespace Stabel.IO{
         public void ConfigureServices(IServiceCollection services){
             // Add framework services.
             services.AddMvc();
+
+            services.AddTransient<IStableService, StableService>();
+            services.AddSingleton<IStorageService, InMemStorageService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

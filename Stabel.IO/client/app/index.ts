@@ -7,6 +7,8 @@ import {routing, RootComponent} from './root/root.component';
 
 
 import { SamplesService } from './services/api/Samples.service';
+import { StabelV1Service } from './services/api/StabelV1.service';
+import { StabelService } from './services/Stabel.service';
 
 import {MdTabsModule} from '@angular/material';
 import {MdInputModule} from '@angular/material';
@@ -62,7 +64,7 @@ import { ClipboardModule } from 'ngx-clipboard';
     FooterComponent,
     CopyFieldComponent
   ],
-  providers: [SamplesService],
+  providers: [SamplesService, StabelService, StabelV1Service],
   entryComponents: [StabelDialogComponent],
   bootstrap: [RootComponent]
 })

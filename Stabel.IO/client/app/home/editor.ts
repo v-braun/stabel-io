@@ -1,7 +1,7 @@
 import {Component, SimpleChange, ViewChild, EventEmitter, Output} from '@angular/core';
 import { SafeResourceUrl} from '@angular/platform-browser';
 
-import {StabelService, TemplateParameter, SampleItem} from '../services/StabelService';
+import {StabelService, TemplateParameter, SampleItem} from '../services/Stabel.service';
 import { DomSanitizer} from '@angular/platform-browser';
 import {MdTabChangeEvent} from '@angular/material';
 import {SvgEditorComponent} from '../components/common/svg-editor';
@@ -40,7 +40,6 @@ export class EditorComponent {
     stabelService.getSamples().subscribe(data => {
       this.sampleItems = data;
       this.showSample(this.sampleItems[0]);
-      console.log(this.sampleItems[0]);
     });
   }
 
