@@ -24,6 +24,7 @@ import {StabelDialogComponent} from './home/stabel-dialog';
 import {GalleryComponent} from './components/gallery.component';
 import {EditorComponent} from './home/editor';
 import {MainComponent} from './home/home';
+import {AboutComponent} from './home/about';
 import {SvgEditorComponent} from './components/common/svg-editor';
 import {HeaderComponent} from './components/layout/header.component';
 import {TitleComponent} from './components/layout/title.component';
@@ -62,7 +63,8 @@ import { ClipboardModule } from 'ngx-clipboard';
     GalleryComponent,
     TitleComponent,
     FooterComponent,
-    CopyFieldComponent
+    CopyFieldComponent,
+    AboutComponent
   ],
   providers: [SamplesService, StabelService, StabelV1Service],
   entryComponents: [StabelDialogComponent],

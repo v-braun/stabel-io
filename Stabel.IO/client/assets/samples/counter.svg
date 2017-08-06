@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 30 30" preserveAspectRatio="none" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text{
+      fill: rgb(255, 255, 255); 
+      font-size: 10px; 
+      stroke: rgb(255, 255, 255); 
+      stroke-width: 0px; text-anchor: middle; white-space: pre;
+    }
+  </style>
+  <ellipse transform="matrix(-0.654931, 0.755689, -0.75569, -0.65493, 136.423715, -5.102138)" cx="94.715" cy="78.593" rx="15" ry="15" style="fill: rgb(218, 85, 85);"/>
+  <text x="15.025" y="18.445">{{count}}</text>
+</svg>

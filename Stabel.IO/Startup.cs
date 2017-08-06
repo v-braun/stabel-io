@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
@@ -13,11 +14,18 @@ using Stabel.IO.Services.Impl;
 namespace Stabel.IO{
     public class Startup{
         public Startup(IHostingEnvironment env){
+
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
+                // docker secrets file
+                .AddJsonFile(@"C:\ProgramData\Docker\secrets\stabel.io.json", optional: true, reloadOnChange: true)
+                .AddJsonFile(@"/run/secrets/stabel.io.json", optional: true, reloadOnChange: true)
+
                 .AddEnvironmentVariables();
+
+            
             Configuration = builder.Build();
         }
 

@@ -90,7 +90,9 @@ export class EditorComponent {
   }
 
   private showSample(item : SampleItem){
-    if(!item) return;
+    if(!item){
+      return;
+    }
     this._content = item.svg;
     this.params = item.params;
     this.compiled = item.compiled;

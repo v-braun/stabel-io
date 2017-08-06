@@ -11,6 +11,16 @@ namespace Stabel.IO.Controllers{
             return new SamplesResponse{
                 Items = new SamplesResponse.SampleEntry[]{
                     new SamplesResponse.SampleEntry{
+                        Title = "counter",
+                        Url = "/assets/samples/counter.svg",
+                        Parameters = new SamplesResponse.SampleEntryParam[]{
+                            new SamplesResponse.SampleEntryParam{
+                                Name = "count",
+                                Value = "42"
+                            }
+                        }
+                    },
+                    new SamplesResponse.SampleEntry{
                         Title = "Build Status",
                         Url = "/assets/samples/build_status.svg",
                         Parameters = new SamplesResponse.SampleEntryParam[]{

@@ -9,10 +9,6 @@ import {MainComponent} from '../home/home';
   template: '<router-outlet></router-outlet>'
 })
 export class RootComponent{
-
-  constructor(){
-
-  }
 }
 
 export const routes: Routes = [

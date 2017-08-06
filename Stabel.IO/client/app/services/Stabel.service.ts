@@ -4,8 +4,8 @@ import {SafeResourceUrl, DomSanitizer} from '@angular/platform-browser';
 //import {StabelSamples} from './StabelSamples';
 import { SamplesService } from './api/Samples.service';
 import { StabelV1Service } from './api/StabelV1.service';
-import { Observable } from "rxjs/Observable";
-import { Subject } from "rxjs/Subject";
+import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
 
 
 export class TemplateParameter {
@@ -39,7 +39,7 @@ export class StabelService {
                }
   
   getSamples() : Subject<SampleItem[]>{
-    let vm = new Subject<SampleItem[]>()
+    let vm = new Subject<SampleItem[]>();
     this._samples.get().subscribe(samples => {
       let result : SampleItem[] = [];
       samples.items.forEach(item => {

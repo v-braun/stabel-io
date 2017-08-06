@@ -1,7 +1,8 @@
-import {Component} from '@angular/core';
-import { MdDialogRef} from '@angular/material';
+import {Component, Inject} from '@angular/core';
+import {MdDialogRef, MD_DIALOG_DATA} from '@angular/material';
 import './stabel-dialog.scss';
 import {GenerateRequest} from './editor';
+
 
 @Component({
   selector: 'stabel-dialog',
@@ -9,8 +10,9 @@ import {GenerateRequest} from './editor';
 })
 export class StabelDialogComponent {
 
-  public sampleUrl : string = 'http://google.de';
   
-  constructor(public dialogRef: MdDialogRef<StabelDialogComponent>) {}
+  constructor(@Inject(MD_DIALOG_DATA) public data: any) {
+    
+  }
 
 }

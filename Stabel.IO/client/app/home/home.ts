@@ -24,16 +24,32 @@ export class MainComponent {
   generate(req : GenerateRequest){
     
     this._service.create(req.content, req.params)
-                 .subscribe(res => {
-                   console.log('done!');
-                   console.log(res);
-                 });
-    // let conf : MdDialogConfig = new MdDialogConfig();
-    // conf.width = '90%';
-    // let dialogRef = this.dialog.open(StabelDialogComponent, conf);
-    // dialogRef.afterClosed().subscribe(result => {
-      
-    // });
-    
+        .subscribe(res => {
+          let paramJson = {};
+          let query = '';
+          for(let p of req.params){
+            paramJson[p.name] = p.value;
+            let qName = encodeURIComponent(`request.parameter.${p.name}`);
+            let qVal = encodeURIComponent(p.value);
+            query += `${qName}=${qVal}&`;
+          }
+          let conf : MdDialogConfig = new MdDialogConfig();
+          conf.data = {
+              get:{
+                raw: res.getUrl,
+                html: `<img src="${res.getUrl}" />`,
+                md: `![delivered by stabel.io](${res.getUrl})`
+              },
+              post:{
+                raw: `${res.sendUrl}?${query}`,
+                curl: `curl -X PUT -H "Content-Type: application/json" -d '{parameter: ${JSON.stringify(paramJson)}}' "${res.putUrl}"`
+              }
+            };
+
+            conf.width = '100%';
+            //conf.position = 
+            let dialogRef = this._dialog.open(StabelDialogComponent, conf);
+            
+          });
   }
 }

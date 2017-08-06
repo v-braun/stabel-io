@@ -29,7 +29,8 @@ namespace Stabel.IO.Controllers{
                 PublicId = result.publicId,
                 PrivateId = result.privateId,
                 PutUrl = $"{rq.Scheme}://{rq.Host}/api/v1/{result.privateId}",
-                GetUrl = $"{rq.Scheme}://{rq.Host}/api/v1/{result.publicId}"
+                SendUrl = $"{rq.Scheme}://{rq.Host}/api/v1/p/{result.privateId}",
+                GetUrl = $"{rq.Scheme}://{rq.Host}/api/v1/{result.publicId}",
             });
         }
 
@@ -69,6 +70,13 @@ namespace Stabel.IO.Controllers{
             catch(Exception){
                 return BadRequest();
             }
+        }
+
+        [HttpGet("p/{id}")]
+        [HttpPut("p/{id}")]
+        [HttpPost("p/{id}")]
+        public async Task<ActionResult> Send(string id, [FromQuery]StabelUpdateRequest request){
+            return await Put(id, request);
         }
     }
 }

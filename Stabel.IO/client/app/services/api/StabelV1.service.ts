@@ -34,5 +34,6 @@ export module StabelV1Service{
       
       public putUrl : string = '';
       public getUrl : string = '';
+      public sendUrl : string = '';
   }  
 }
