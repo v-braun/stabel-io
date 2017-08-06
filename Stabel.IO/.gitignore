@@ -7,7 +7,7 @@
 wwwroot/*
 !wwwroot/.gitkeep
 
-
+appsettings.Development.json
 
 # User-specific files
 *.suo
