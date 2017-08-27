@@ -33,9 +33,7 @@ function other() {
   const fileFilter = filter(file => file.stat.isFile());
 
   return gulp.src([
-    path.join(conf.paths.src, '/**/*'),
-    path.join(`!${conf.paths.src}`, '/**/*.{scss,ts,html,png}'),
-
+    path.join(conf.paths.src, '/assets/favicon.ico'),
   ])
     .pipe(fileFilter)
     .pipe(gulp.dest(conf.paths.dist));

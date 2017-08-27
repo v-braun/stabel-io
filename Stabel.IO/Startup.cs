@@ -14,11 +14,11 @@ using Stabel.IO.Services.Impl;
 namespace Stabel.IO{
     public class Startup{
         public Startup(IHostingEnvironment env){
-
+            Console.WriteLine($"start with env {env.EnvironmentName}");
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
+                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true)
                 // docker secrets file
                 .AddJsonFile(@"C:\ProgramData\Docker\secrets\stabel.io.json", optional: true, reloadOnChange: true)
                 .AddJsonFile(@"/run/secrets/stabel.io.json", optional: true, reloadOnChange: true)
@@ -36,8 +36,19 @@ namespace Stabel.IO{
             // Add framework services.
             services.AddMvc();
 
-            services.AddTransient<IStableService, StableService>();
-            services.AddSingleton<IStorageService, InMemStorageService>();
+            services.AddTransient<IStabelService, StabelService>();
+            var azureStorageConnectionString = Configuration.GetValue("AzureStorageConnectionString", "");
+            if(!string.IsNullOrEmpty(azureStorageConnectionString)){
+                Console.WriteLine("Use Azure Storage Account");
+                services.AddSingleton<IStorageService, AzureStorageService>(
+                    (serviceProvider) => new AzureStorageService(azureStorageConnectionString)
+                );
+            }
+            else{
+                Console.WriteLine("Use InMem Blob Storage");
+                services.AddSingleton<IStorageService, InMemStorageService>();
+            }
+
             services.AddSingleton<IConfigurationRoot>(Configuration);
         }
 

@@ -11,9 +11,9 @@ namespace Stabel.IO.Controllers{
     [Route("api/v1")]
     public class StabelV1Controller : Controller{
 
-        private readonly IStableService _service;
+        private readonly IStabelService _service;
 
-        public StabelV1Controller(IStableService service){
+        public StabelV1Controller(IStabelService service){
             _service = service;
         }
 

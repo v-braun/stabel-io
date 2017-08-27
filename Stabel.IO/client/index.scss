@@ -16,11 +16,18 @@ body, h1, h2, h3 {
 
 
 a {
-  color: mat-color($stabel-primary, default-contrast);
+  $link-color: mat-color($stabel-primary, default);
+  color: $link-color;
+  font-weight: bold;
   text-decoration: none;
-
+  cursor: pointer;
+  &:link, &:visited{ 
+    color: $link-color; 
+  }
+  
   &:hover {
-    color: mat-color($stabel-accent, lighter);
+    color: mat-color($stabel-accent, default);
+    text-decoration: underline;
   }
 }
 
@@ -45,28 +52,6 @@ button.btn-prim{
   background-color: mat-color($stabel-primary, default);
   color: mat-color($stabel-primary, default-contrast);
 }
-/*
-// html, body, #root {
-//   margin: 0;
-//   height: 100%;
-//   font-family: 'Open Sans', sans-serif;
-// }
-
-
-
-// a {
-//   color: white;
-//   text-decoration: none;
-
-//   &:hover {
-//     color: #5aadbb;
-//   }
-// }
-
-// .mat-input-underline{
-//   background-color: silver;
-// }
-*/
 
 .material-icons {
   font-family: 'Material Icons';

@@ -15,9 +15,11 @@ namespace Stabel.IO.Controllers{
         [HttpGet()]
         public ActionResult Get(){
             var version = this.config.GetValue<string>("AppVersion");
+            var trackingId = this.config.GetValue<string>("AnalyticsTrackingId");
 
             var config = new ConfigurationResponse{
-                AppVersion = version
+                AppVersion = version,
+                AnalyticsTrackingId = trackingId
             };
 
             var result = Json(config);

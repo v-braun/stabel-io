@@ -16,4 +16,12 @@
   flex: 1;
   font-size: 1.5rem;
   margin: 1rem;
+  a{
+    //color: white;
+    font-weight: normal;
+    &:hover{
+      color: mat-color($stabel-primary, default);
+      text-decoration: none;
+    }
+  }
 }

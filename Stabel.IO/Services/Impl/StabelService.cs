@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 
 namespace Stabel.IO.Services.Impl{
-    public class StableService : IStableService{
+    public class StabelService : IStabelService{
 
         private readonly IStorageService _storage;
-        public StableService(IStorageService storage){
+        public StabelService(IStorageService storage){
             _storage = storage;
         }
 
         private (string container, string compiled, string template) GetBlobLocation(string id){
-            var container = (Math.Abs(id.GetHashCode()) % 1000).ToString();
+            var container = "stabel-v1";
             var compiled = $"{id}_compiled";
             var template = $"{id}_template";
 
@@ -74,9 +74,9 @@ namespace Stabel.IO.Services.Impl{
             var pubId = CreatePublicId(privId);
 
             var meta = new Dictionary<string, string>(){
-                {"public-id", pubId},
-                {"private-id", privId},
-                {"created-at", DateTime.UtcNow.ToString("o")}
+                {"publicid", pubId},
+                {"privateid", privId},
+                {"createdat", DateTime.UtcNow.ToString("yyyyMMddHHmmss")}
             };
 
             var location = GetBlobLocation(pubId);
@@ -118,8 +118,8 @@ namespace Stabel.IO.Services.Impl{
                 throw new InvalidOperationException("not found");
             }
 
-            if(!meta.ContainsKey("private-id")) return;
-            if(meta["private-id"] != privateId) return;
+            if(!meta.ContainsKey("privateid")) return;
+            if(meta["privateid"] != privateId) return;
 
             var compiled = CompileTemplate(content, parameter);
 

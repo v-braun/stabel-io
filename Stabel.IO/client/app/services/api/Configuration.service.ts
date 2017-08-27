@@ -29,5 +29,6 @@ export class ConfigurationService {
 export module ConfigurationService{
   export class ConfigurationResponse{
     public appVersion : string = '';
+    public analyticsTrackingId : string = '';
   }
 }
