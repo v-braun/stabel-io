@@ -12,7 +12,7 @@ RUN dotnet publish -c Release -o out
 # build runtime image
 FROM microsoft/dotnet:1.1-runtime 
 WORKDIR /app
-COPY /app/out ./
+COPY --from=build-env /app/out ./
 
 EXPOSE 5000
 
