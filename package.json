@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "gulp serve",
-    "build": "gulp build"
+    "serve": "node ./node_modules/gulp-cli/bin/gulp.js serve",
+    "build": "node ./node_modules/gulp-cli/bin/gulp.js build"
   },
   "author": "",
   "license": "ISC",
