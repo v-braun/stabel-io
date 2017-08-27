@@ -38,6 +38,7 @@ namespace Stabel.IO{
 
             services.AddTransient<IStableService, StableService>();
             services.AddSingleton<IStorageService, InMemStorageService>();
+            services.AddSingleton<IConfigurationRoot>(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
