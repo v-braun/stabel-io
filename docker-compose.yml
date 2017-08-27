@@ -1,0 +1,19 @@
+version: '3'
+
+networks:
+  proxy-net:
+    external:
+      name: proxy-net
+
+services:
+  stabel-io-web:
+    container_name: stabel-io-web
+    networks:
+      - proxy-net  
+    build: .
+#    ports:
+#     - "5000:5000"
+    environment:
+      - VIRTUAL_HOST=stabel.io
+#      - LETSENCRYPT_HOST=stabel-io
+#      - LETSENCRYPT_EMAIL=mail@viktor-braun.de

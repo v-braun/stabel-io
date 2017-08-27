@@ -30,7 +30,6 @@ export class SampleItem{
 
 @Injectable()
 export class StabelService {
-  private endpointUrl = 'http://localhost:5000/api/values'; 
   
   constructor (private _http: Http, 
                private _sanitizer: DomSanitizer,
