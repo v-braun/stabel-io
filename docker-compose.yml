@@ -1,4 +1,4 @@
-version: '3.1'
+version: "3.1"
 
 networks:
   proxy-net:
@@ -21,4 +21,4 @@ services:
       - stabel_io_secrets
 secrets:
   stabel_io_secrets: 
-    file: stabel.io.json
+    file: "stabel_io_secrets"
