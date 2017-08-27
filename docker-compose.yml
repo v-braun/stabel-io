@@ -21,4 +21,4 @@ services:
       - stabel_io_secrets
 secrets:
   stabel_io_secrets: 
-    file: "stabel_io_secrets"
+    file: ./stabel_io_secrets
