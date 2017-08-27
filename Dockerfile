@@ -11,7 +11,7 @@ RUN dotnet publish -c Release -o out
 
 
 # build client
-FROM microsoft/aspnetcore-build:1.1 AS build-env-client
+FROM node:6 AS build-env-client
 WORKDIR /app
 COPY *.js ./
 COPY package.json ./
