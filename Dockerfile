@@ -27,7 +27,7 @@ RUN npm run build
 FROM microsoft/aspnetcore:1.1
 WORKDIR /app
 COPY --from=build-env /app/out ./
-COPY --from=build-env-client /app/wwwroot ./wwwroot
+COPY --from=build-env-client /app/wwwroot ./wwwroot/
 
 EXPOSE 80
 
