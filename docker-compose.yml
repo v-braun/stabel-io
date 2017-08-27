@@ -14,11 +14,8 @@ services:
 #    ports:
 #     - "5000:5000"
     environment:
+      - "AnalyticsTrackingId:${AnalyticsTrackingId}"
+      - "AzureStorageConnectionString:${AzureStorageConnectionString}"
       - VIRTUAL_HOST=stabel.io
 #      - LETSENCRYPT_HOST=stabel-io
 #      - LETSENCRYPT_EMAIL=mail@viktor-braun.de
-    secrets:
-      - stabel_io_secrets
-secrets:
-  stabel_io_secrets: 
-    file: ./stabel_io_secrets
