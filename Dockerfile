@@ -15,8 +15,8 @@ FROM node:6 AS build-env-client
 WORKDIR /app
 COPY *.js ./
 COPY package.json ./
-COPY ./client/** ./client
-COPY ./client_build/** ./client_build
+COPY ./client ./client/
+COPY ./client_build ./client_build/
 RUN npm install
 RUN npm install gulp -g
 RUN npm run build
