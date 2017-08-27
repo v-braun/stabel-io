@@ -14,4 +14,6 @@ FROM microsoft/aspnetcore:1.1
 WORKDIR /app
 COPY --from=build-env /app/out ./
 
+EXPOSE 80
+
 ENTRYPOINT ["dotnet", "Stabel.IO.dll"]
