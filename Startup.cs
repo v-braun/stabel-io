@@ -20,8 +20,8 @@ namespace Stabel.IO{
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true)
                 // docker secrets file
-                .AddJsonFile(@"C:\ProgramData\Docker\secrets\stabel.io.json", optional: true, reloadOnChange: true)
-                .AddJsonFile(@"/run/secrets/stabel.io.json", optional: true, reloadOnChange: true)
+                .AddJsonFile(@"C:\ProgramData\Docker\secrets\stabel_io_secrets", optional: true, reloadOnChange: true)
+                .AddJsonFile(@"/run/secrets/stabel_io_secrets", optional: true, reloadOnChange: true)
 
                 .AddEnvironmentVariables();
 

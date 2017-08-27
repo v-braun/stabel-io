@@ -18,7 +18,7 @@ services:
 #      - LETSENCRYPT_HOST=stabel-io
 #      - LETSENCRYPT_EMAIL=mail@viktor-braun.de
     secrets:
-      - "stabel.io.json"
+      - stabel_io_secrets
 secrets:
-  "stabel.io.json": 
+  stabel_io_secrets: 
     file: stabel.io.json
