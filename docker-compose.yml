@@ -11,11 +11,10 @@ services:
     networks:
       - proxy-net  
     build: .
-#    ports:
-#     - "5000:5000"
+    restart: always
     environment:
+      - "AzureStorageConnectionString:${AzureStorageConnectionString}"    
       - "AnalyticsTrackingId:${AnalyticsTrackingId}"
-      - "AzureStorageConnectionString:${AzureStorageConnectionString}"
       - VIRTUAL_HOST=stabel.io
 #      - LETSENCRYPT_HOST=stabel-io
 #      - LETSENCRYPT_EMAIL=mail@viktor-braun.de
