@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+  <g transform="matrix(1, 0, 0, 1, -37.801651, -120.965286)">
+    <g transform="matrix(-0.847251, -0.37722, 0.294084, -0.660524, 197.266205, 263.697235)">
+      <title id="title4479">etiquette</title>
+      <g id="layer1" transform="translate(-246.66 -471.58)">
+        <g id="g4497">
+          <path id="path4296" d="m257.67 472.58c-5 1-10.302 0.37245-10 12.371v75.629c0 6 2.2796 11.701 11.047 9.9245l121.95 1.0755c8.9938 0.57574 10.375-1.0606 16-7.2434l30.3-33.54c5.2466-6.2497 3.9867-14.349-0.28147-19.277l-30.015-33.939c-6.103-6.4567-8.6217-4.6217-13.247-5z" style="stroke-linejoin: round; stroke-dashoffset: 3.003; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-width: 2; fill: rgb(103, 58, 183);"/>
+          <path id="path4298" style="stroke-linejoin: round; stroke-dashoffset: 3.003; stroke: rgb(0, 0, 0); stroke-linecap: round; fill: rgb(253, 253, 253);" d="m867.68 556.19a7.3376 7.1769 0 1 1 -14.675 0 7.3376 7.1769 0 1 1 14.675 0z" transform="translate(-445.19 -34.346)"/>
+          <rect id="rect4300" style="stroke-linejoin: round; stroke-dashoffset: 3.003; stroke: rgb(0, 0, 0); stroke-linecap: round; fill: rgb(0, 150, 136);" ry="7.7595" height="77.65" width="127.27" y="482.72" x="259.41"/>
+        </g>
+      </g>
+    </g>
+    <text x="95.744" y="196.133" transform="matrix(0.913546, 0.406736, -0.406735, 0.913545, 102.956963, -40.561768)" style="fill: rgb(241, 241, 241); font-family: sans-serif; font-size: 18px; white-space: pre;">STABEL.IO</text>
+    <text x="95.744" y="196.133" transform="matrix(0.913546, 0.406736, -0.406735, 0.913545, 90.955032, -16.534351)" style="fill: rgb(241, 241, 241); font-family: sans-serif; font-size: 8px; white-space: pre;">POST status - GET label</text>
+  </g>
+</svg>
