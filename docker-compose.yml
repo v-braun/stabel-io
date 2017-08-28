@@ -13,8 +13,6 @@ services:
     build: .
     restart: always
     environment:
-      - "AzureStorageConnectionString:${AzureStorageConnectionString}"    
-      - "AnalyticsTrackingId:${AnalyticsTrackingId}"
       - VIRTUAL_HOST=stabel.io
 #      - LETSENCRYPT_HOST=stabel-io
 #      - LETSENCRYPT_EMAIL=mail@viktor-braun.de
