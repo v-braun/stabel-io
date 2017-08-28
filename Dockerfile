@@ -1,4 +1,4 @@
-FROM microsoft/aspnetcore-build:1.1 AS build-env
+FROM microsoft/aspnetcore-build:2.0 AS build-env
 WORKDIR /app
 
 # copy csproj and restore as distinct layers
@@ -25,7 +25,7 @@ RUN npm run build
 
 
 # build runtime image
-FROM microsoft/aspnetcore:1.1
+FROM microsoft/aspnetcore:2.0
 WORKDIR /app
 COPY --from=build-env /app/out ./
 COPY --from=build-env-client /app/wwwroot ./wwwroot/
