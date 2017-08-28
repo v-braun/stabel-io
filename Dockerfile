@@ -30,6 +30,4 @@ WORKDIR /app
 COPY --from=build-env /app/out ./
 COPY --from=build-env-client /app/wwwroot ./wwwroot/
 
-EXPOSE 80
-
 ENTRYPOINT ["dotnet", "Stabel.IO.dll"]
